@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    font-size: 14px;
+    background-color: #2b2f4b;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: #2b2f4b;
+    color: #fff;
+}
+
+header #particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .info-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 100vh;
+}
+
+header .info-text h1{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+header .info-text h3{
+    font-size: 1.5rem;
+}
+
+header .info-text .scroll{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+}
+
+header .info-text .scroll:hover{
+    opacity: 0.7;
+}
+
+header .info-text .scroll::before{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100%{
+        opacity: 0;
+    }
+    15%, 45%{
+        opacity: 1;
+    }
+    60%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
+#about, #features{
+    background-color: #2b2f4b;
+    padding: 40px;
+}
+
+#about .header, #features .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about .header h1, #features .header h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#about .header a, #features .header a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#about .header a:hover, #features .header a:hover{
+    border-color: #fff;
+    box-shadow: none;
+    color: #ffb742;
+}
+
+#about .card, #features .card{
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#about .card:hover, #features .card:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#about .card img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#about .card .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about .card .info h1, #features .card .info h1{
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+#about .card .info p, #features .card .info p{
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#features .feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#features .feature-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#features .feature-cards .card .info i{
+    color: #fff;
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#features .feature-cards .card .info h1{
+    text-align: center;
+}
+
+#features .feature-cards .card .info p{
+    font-size: 1.1rem;
+}
+
+.card .info h3{
+    color: #fff;
+}
+
+.scroll-top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2b2f4b;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 720px) {
+    header .info-text h1{
+        font-size: 4rem;
+    }
+
+    header .info-text h3{
+        font-size: 1.1rem;
+    }
+
+    #about .card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .card img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+}
+
+.guarantee {
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: wrap; /* Elemet új sorba helyezi, ha nem férnek el */
+    gap: 24px;
+    background-color: #2b2f4b;
+}
+
+.guarantee .item {
+    background: #2b2f4b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: calc(33.333% - 24px); /* Számított szélesség a gap figyelembevételével */
+    border-radius: 10px;
+    padding: 0 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.guarantee .item:hover {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.guarantee .item .icon {
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.guarantee .item:hover .icon {
+    background-color: #fff;
+}
+
+.guarantee .item .icon i {
+    font-size: 30px;
+}
+
+.guarantee .item .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guarantee .item .info h3 {
+    color: #ffb742;
+    font-size: 28px;
+}
+
+.guarantee .item .info p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.guarantee .item > i {
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.guarantee .item:hover > i {
+    color: #fff;
+}
+
+/* Média lekérdezések a reszponzív viselkedéshez */
+@media (max-width: 768px) {
+    .guarantee .item {
+        width: calc(50% - 24px); /* Két oszlopos elrendezés közepes kijelzőkön */
+    }
+}
+
+@media (max-width: 480px) {
+    .guarantee .item {
+        width: 100%; /* Egy oszlopos elrendezés kis kijelzőkön */
+    }
+}
+
+
+.skills{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px ;    
+}
+
+.skills .left{
+    width: 680px;
+}
+
+.skills .left .info h3{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.skills .left .info p{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.skills .left button{
+    margin-top: 30px;
+}
+
+.skills .right{
+    width: 420px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills .right .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2b2f4b;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border: 1px solid transparent;
+}
+
+.right .item i {
+    transition: opacity 0.3s ease;
+}
+
+.right .item a {
+    display: none;
+    margin-left: -70%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    font-size: 15px;
+}
+
+.right .item:hover i {
+    opacity: 0;
+}
+
+.right .item:hover a {
+    display: block;
+    opacity: 1;
+    color: #fff;
+}
+
+.skills .right .item i{
+    font-size: 50px;
+    color: #fff;
+}
+
+.skills .right .item:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.skills .right:hover {
+    border-color: #fff;
+    box-shadow: none;
+
+}
+
+.skills .left{
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.skills .left .info h3{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.skills .left .info p{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.skills .left button{
+    margin-top: 30px;
+}
+
+.skills .left:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+footer .cols{
+    display: flex;
+    align-items: start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 30px;
+    margin-top: 5%;
+    gap: 30px;
+    border: 1px solid transparent;
+}
+
+footer .cols .about-col{
+    flex: 3;
+}
+
+footer .cols .about-col h3{
+    color: #ffb742;
+    margin-bottom: 20px;
+}
+
+footer .cols .about-col p{
+    color: #ccc;
+    font-size: 13px;
+}
+
+.head {
+    display: flex;
+    justify-content: flex-start; /* Középre igazítja a tartalmat */
+    align-items: center; /* Vertikális középre igazítás */
+    padding: 0 20px; /* Kis párnázás a széleken */
+    box-sizing: border-box; /* A paddingot beleszámolja a méretezésbe */
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 20px;
+}
+
+.head h1 {
+    font-size: 1.3em;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 2% 0;
+    text-align: center;
+    word-wrap: break-word; /* Ha szükséges, megtöri a hosszú szavakat */
+}
+
+/* Média lekérdezés kisebb kijelzők esetén */
+@media (max-width: 600px) {
+    .head h1 {
+        font-size: 1.1em; /* Kisebb betűméret kisebb kijelzőkön */
+    }
+}
+
+
+.head1 {
+    display: flex;
+    justify-content: flex-start; /* Középre igazítja a tartalmat */
+    align-items: center; /* Vertikális középre igazítás */
+    padding: 0 20px; /* Kis párnázás a széleken */
+    box-sizing: border-box; /* A paddingot beleszámolja a méretezésbe */
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 20px;
+}
+
+.head1 h1 {
+    font-size: 1.3em;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 2% 0;
+    text-align: center;
+    word-wrap: break-word; /* Ha szükséges, megtöri a hosszú szavakat */
+}
+
+/* Média lekérdezés kisebb kijelzők esetén */
+@media (max-width: 600px) {
+    .head h1 {
+        font-size: 1.1em; /* Kisebb betűméret kisebb kijelzőkön */
+    }
+}
+
+.copyright{
+    max-width: 200px;
+    margin: auto;
+    margin-right: 3%;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.head2 {
+    display: flex;
+    justify-content: flex-start; /* Középre igazítja a tartalmat */
+    align-items: center; /* Vertikális középre igazítás */
+    padding: 0 20px; /* Kis párnázás a széleken */
+    box-sizing: border-box; /* A paddingot beleszámolja a méretezésbe */
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-bottom: -50px;
+}
+
+.head2 h1 {
+    font-size: 1.3em;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 2% 0;
+    text-align: center;
+    word-wrap: break-word; /* Ha szükséges, megtöri a hosszú szavakat */
+}
+
+/* Média lekérdezés kisebb kijelzők esetén */
+@media (max-width: 600px) {
+    .head h1 {
+        font-size: 1.1em; /* Kisebb betűméret kisebb kijelzőkön */
+    }
+}
+
+.feedback {
+    padding: 110px 85px;
+}
+
+.feedback .customers {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap; /* Eleve ne törjön sorba */
+}
+
+.feedback .customers .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    flex: 1; /* Az elemek egyenlő arányban oszlanak el */
+}
+
+.feedback .customers .item .rating {
+    color: #ffb742;
+    font-size: 22px;
+}
+
+.feedback .customers .item:hover {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.feedback .customers .item p {
+    line-height: 22px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.feedback .customers .item .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedback .customers .item .user img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback .customers .item .user h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+.feedback .customers .item .user p {
+    font-size: 12px;
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    .feedback {
+        padding: 60px 20px; /* Kisebb padding kisebb kijelzőkhöz */
+    }
+
+    .feedback .customers {
+        flex-wrap: wrap; /* Elemtörés engedélyezése kisebb kijelzőkön */
+        gap: 20px; /* Kisebb távolság az elemek között */
+    }
+
+    .feedback .customers .item {
+        padding: 20px; /* Kevesebb padding az elemek körül */
+        width: calc(50% - 20px); /* Az elemek szélessége fele a rendelkezésre álló térnek */
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback .customers .item {
+        width: 100%; /* Egyetlen oszlopra váltás kis kijelzőknél */
+        padding: 20px;
+    }
+}
+
+
+
+footer .bottom .links a{
+    font-size: 12px;
+    margin-left: 14px;
+    color: #fff;
+}
+
+footer .bottom{
+    flex-direction: column-reverse;
+    gap: 14px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.links {
+    font-size: 24px;
+}
+
+.feedback1 {
+    padding: 110px 20px; /* Kisebb padding kisebb kijelzőkhöz */
+    color: #fff;
+    margin: 0 auto; /* Középre igazítás automatikusan */
+    max-width: 400px; /* Maximális szélesség nagyobb kijelzőkhöz */
+    margin-top: -90px;
+    margin-bottom: -70px;
+}
+
+.feedback1 .customers1 {
+    display: flex;
+    flex-wrap: nowrap; /* Törés engedélyezése kisebb kijelzőkön */
+    gap: 40px;
+}
+
+.feedback1 .customers1 .item1 {
+    flex: 1 1 calc(33.333% - 40px); /* Rugalmas szélesség a gap figyelembevételével */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    min-width: 280px; /* Minimális szélesség az elemeknek */
+}
+
+.feedback1 .customers1 .item1 h3{
+    margin-left: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.feedback1 .customers1 .item1:hover {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+/* Reszponzív stílusok */
+@media (max-width: 768px) {
+    .feedback1 {
+        padding: 60px 15px; /* Kevesebb padding kis kijelzőknél */
+    }
+
+    .feedback1 .customers1 .item1 {
+        flex: 1 1 calc(50% - 20px); /* Két oszlop kis kijelzőn */
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback1 .customers1 .item1 {
+        flex: 1 1 100%; /* Egy oszlop kis kijelzőn */
+    }
+}
+
+
+/*.feedback1 .customers1 .item1:hover{
+    border-color: #fff;
+    box-shadow: none;
+}*/
+
+.item1 a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    justify-content: center;
+}
+
+.item1 p{
+    font-size: 1.5em;
+}
+
+.item1 a:hover{
+    border-color: #fff;
+    box-shadow: none;
+    color: #ffb742;
+}
