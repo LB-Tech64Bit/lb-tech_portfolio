@@ -361,13 +361,15 @@ header .info-text .scroll::before{
 }
 
 .skills .right{
-    width: 420px;
-    height: 120px;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+    margin-bottom: 20px; /* Távolság az alatta lévő elemektől */
 }
 
 .skills .right .item{
@@ -419,8 +421,27 @@ header .info-text .scroll::before{
 .skills .right:hover {
     border-color: #fff;
     box-shadow: none;
-
 }
+
+/* Media query a kis kijelzők támogatására */
+@media (max-width: 768px) {
+    .skills .right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px; /* Térköz az alatta lévő elemekkel */
+    }
+
+    .skills .right .item {
+        width: 60px;
+        height: 60px;
+    }
+
+    .right .item i, .right .item a {
+        font-size: 14px;
+    }
+}
+
 
 .skills .left{
     padding: 30px;
