@@ -244,7 +244,7 @@ header .info-text .scroll::before{
 
 .guarantee {
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 0 50px;
     display: flex;
     flex-wrap: wrap; /* Elemet új sorba helyezi, ha nem férnek el */
